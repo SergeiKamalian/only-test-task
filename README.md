@@ -1,6 +1,6 @@
 # Test task Only
 
-[Demo]([http://localhost:3000](https://sergeikamalian.github.io/only-test-task/))
+[Demo](https://sergeikamalian.github.io/only-test-task/)
 
 ### `npm start`
 
