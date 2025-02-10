@@ -7,16 +7,29 @@ export const StyledCircleSliderArrows = styled.div`
   flex-direction: column;
   gap: 20px;
   bottom: 0;
-  /* bottom: -25px; */
+
+  @media (max-width: 991px) {
+    position: relative;
+    left: unset;
+    gap: 10px;
+  }
 `;
 export const StyledLabel = styled.span`
   font-size: 16px;
   font-weight: 400;
   color: #42567a;
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
 `;
 export const StyledArrowsRow = styled.div`
   display: flex;
   gap: 20px;
+
+  @media (max-width: 991px) {
+    gap: 10px;
+  }
 `;
 export const StyledCircleSliderArrow = styled.button`
   padding: 0;
@@ -44,5 +57,9 @@ export const StyledCircleSliderArrow = styled.button`
     &:hover {
       background: none;
     }
+  }
+
+  @media (max-width: 991px) {
+    zoom: 0.5;
   }
 `;

@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo, ReactNode, useMemo } from "react";
 import { useWindowSize } from "react-use";
 import {
   StyledCircleSlider,
@@ -15,10 +15,11 @@ import { mockData } from "../../../../data.mock";
 interface CircleSliderProps {
   activePeriodId: number;
   setActivePeriodId: React.Dispatch<React.SetStateAction<number>>;
+  innerContent?: ReactNode;
 }
 
 export const CircleSlider = memo((props: CircleSliderProps) => {
-  const { activePeriodId, setActivePeriodId } = props;
+  const { activePeriodId, setActivePeriodId, innerContent } = props;
   const { height } = useWindowSize();
 
   const activePeriodIndex = useMemo(
@@ -37,11 +38,10 @@ export const CircleSlider = memo((props: CircleSliderProps) => {
     [activePeriodIndex]
   );
 
-  console.log(sliderRotate);
-
   return (
     <StyledCircleSliderWrapper $zoomScale={zoomScale}>
       <CircleSliderYears activePeriodId={activePeriodId} />
+      {innerContent}
       <CircleSliderArrows
         activePeriodId={activePeriodId}
         setActivePeriodId={setActivePeriodId}

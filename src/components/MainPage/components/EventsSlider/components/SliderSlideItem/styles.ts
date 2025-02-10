@@ -11,9 +11,17 @@ export const StyledEventSlideYear = styled.span`
   font-size: 25px;
   font-weight: 400;
   color: #3877ee;
+
+  @media (max-width: 991px) {
+    font-size: 16px;
+  }
 `;
 export const StyledEventSlideContent = styled.span`
   font-size: 20px;
   font-weight: 400;
   color: #42567a;
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
 `;

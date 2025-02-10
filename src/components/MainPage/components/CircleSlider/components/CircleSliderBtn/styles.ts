@@ -52,7 +52,9 @@ export const StyledCircleSliderBtnItem = styled.button<{
 `;
 export const StyledInnerContent = styled.div<{ $isActive: boolean }>`
   width: ${(p) => (p.$isActive ? "100%" : "6px")};
+  min-width: ${(p) => (p.$isActive ? "100%" : "6px")};
   height: ${(p) => (p.$isActive ? "100%" : "6px")};
+  min-height: ${(p) => (p.$isActive ? "100%" : "6px")};
   background: ${(p) => (p.$isActive ? "white" : "#42567a")};
   border: 1px solid ${(p) => (p.$isActive ? "#42567a50" : "white")};
   transition: 300ms ease-in-out;

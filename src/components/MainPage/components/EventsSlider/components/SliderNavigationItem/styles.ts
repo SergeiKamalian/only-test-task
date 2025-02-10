@@ -24,4 +24,8 @@ export const StyledEventsSliderArrow = styled.button<{
   &:disabled {
     display: none;
   }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;

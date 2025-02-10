@@ -9,6 +9,18 @@ export const StyledCircleSliderWrapper = styled.div<{ $zoomScale: number }>`
   top: 50%;
   transform: translateY(-50%);
   zoom: ${(p) => p.$zoomScale};
+
+  @media (max-width: 991px) {
+    zoom: unset;
+    position: relative;
+    top: unset;
+    transform: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: calc(100svh - 40px - 52px);
+    padding: 70px 0 10px;
+  }
 `;
 
 export const StyledCircleSlider = styled.div<{ $rotate: number }>`
@@ -19,6 +31,10 @@ export const StyledCircleSlider = styled.div<{ $rotate: number }>`
   position: relative;
   rotate: ${(p) => `${-p.$rotate}deg`};
   transition: 0.7s ease-in-out;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const StyledSliderPoint = styled.div<{

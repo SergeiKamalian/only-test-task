@@ -8,6 +8,10 @@ export const StyledMainPageWrapper = styled.main`
   position: relative;
   overflow: hidden;
 
+  @media (max-width: 991px) {
+    padding: 40px 20px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -17,6 +21,10 @@ export const StyledMainPageWrapper = styled.main`
     width: 100%;
     height: 1px;
     background: #42567a20;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
   &:after {
     content: "";
@@ -27,6 +35,10 @@ export const StyledMainPageWrapper = styled.main`
     width: 1px;
     height: 100%;
     background: #42567a20;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 `;
 export const StyledMainPageH1 = styled.h1`
@@ -36,12 +48,22 @@ export const StyledMainPageH1 = styled.h1`
   font-size: 56px;
   line-height: #42567a;
   width: fit-content;
-  position: relative;
   padding-left: 50px;
   position: absolute;
   top: 25%;
   transform: translateY(-50%);
   z-index: 1;
+
+  @media (max-width: 991px) {
+    position: relative;
+    top: unset;
+    transform: none;
+    padding: 0;
+    font-size: 36px;
+  }
+  @media (max-width: 568px) {
+    font-size: 20px;
+  }
 
   &:before {
     content: "";
@@ -55,5 +77,8 @@ export const StyledMainPageH1 = styled.h1`
       rgba(56, 119, 238, 1) 21%,
       rgba(239, 93, 168, 1) 84%
     );
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 `;
